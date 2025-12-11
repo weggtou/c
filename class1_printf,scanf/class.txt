@@ -1,0 +1,13 @@
+1.%[flags][width][.precision][length]specifier
+printf格式
+细节看截图
+
+2.scanf输入格式必须和scanf内的一样
+比如scanf("%d,%f",a,b)
+输入格式必须是a,b不然识别不了，而且不支持输入一个回车再输入
+另一个
+而中间没有逗号就不会出现这种情况，所以输入时不要带逗号
+
+3.getchar()，函数 从终端读取一个字符
+putchar(),函数，输出一次字符到终端
+putchar(getchar())
