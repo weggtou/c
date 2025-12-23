@@ -55,6 +55,30 @@ void initui(){
   SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE),c);
 }
 
+int endbybody(){
+  for(int i = 1;i<S.size;i++){
+    if(S.body[0].x==S.body[i].x&&S.body[0].y==S.body[i].y){
+      return 1;
+    }
+  }
+  return 0;
+}
+
+void eat(){
+  if(S.body[0].x==food.x&&S.body[0].y==food.y){
+    auto before = S.body[S.size-1];
+    S.body[S.size].x=before.x;//没写完
+  }
+}
+
+void playgame (){
+  while(S.body[0].x>0&&S.body[0].x<w&&S.body[0].y>0&&S.body[0].y<h&&!endbybody()){
+    if(kbhit()){
+      char x = getchar();
+         
+    }
+  }
+}
 
 int main(){
   srand((unsigned)time(NULL));
